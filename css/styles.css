@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #edf2f7;
+  padding-left: 50px;
+  padding-bottom: 50px;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#categories,
+#ingredients,
+#counter,
+h1,
+#validation-input,
+#text {
+  margin-bottom: 30px;
+}
+
+#gallery {
+  display: flex;
+  margin-left: -10px;
+  margin-top: -10px;
+  padding: 0;
+  list-style: none;
+}
+#gallery .item {
+  padding: 10px;
+  margin-left: 10px;
+  flex-basis: calc(100% / 3 - 10px);
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}
+
+#font-size-control,
+#text {
+  display: block;
+}
