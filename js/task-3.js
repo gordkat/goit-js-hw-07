@@ -16,7 +16,7 @@ const images = [
   },
 ];
 
-let tagStringArr = images.map(
+const tagStringArr = images.map(
   image => `<li class="item"><img src="${image.url}" alt="${image.alt}"></li>`,
 );
 

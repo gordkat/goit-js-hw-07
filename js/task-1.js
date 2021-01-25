@@ -1,13 +1,13 @@
 const categoriesRef = document.querySelector('#categories');
 const categoriesArr = categoriesRef.querySelectorAll('.item');
-let message = `В списке ${categoriesArr.length} категории.`;
-console.log(message);
+const messageCategories = `В списке ${categoriesArr.length} категории.`;
+console.log(messageCategories);
 
 categoriesArr.forEach(item => {
   const titleRef = item.querySelector('h2');
   const titleText = titleRef.textContent;
   const quantityElements = item.querySelectorAll('li').length;
-  message = `Категория: ${titleText}
+  const messageElements = `Категория: ${titleText}
 Количество элементов: ${quantityElements}`;
-  console.log(message);
+  console.log(messageElements);
 });
