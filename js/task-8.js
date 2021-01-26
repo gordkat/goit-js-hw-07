@@ -25,21 +25,22 @@ const randomColorRGB = () => {
 }; */
 
 const createBoxes = amount => {
-  const boxesEmpty = new Array(amount);
-  boxesEmpty.reduce((boxes, box) => {
+  const boxesEmpty = [...new Array(amount)];
+  boxes = boxesEmpty.reduce((acc, box, i) => {
     box = document.createElement('div');
-    box.style.width = size + 'px';
-    box.style.height = size + 'px';
+    box.style.width = size + i * 10 + 'px';
+    box.style.height = size + i * 10 + 'px';
     box.style.backgroundColor = randomColorRGB();
-    boxes.push(box);
-    size += 10;
-    return boxes;
+    acc.push(box);
+    return acc;
   }, []);
+  boxesRef.append(...boxes);
 };
 
 const destroyBoxes = () => {
-  boxes.forEach(box => box.remove());
+  boxesRef.innerHTML = '';
   boxes = [];
+  size = 30;
 };
 
 const handelSaveNumber = event => {
